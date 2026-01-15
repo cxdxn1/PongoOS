@@ -1210,7 +1210,7 @@ void sep_setup(void)
         mailboxregs64 = (volatile struct mailbox_registers64 *)(sep_reg_u + 0x8100);
         is_sep64 = 1;
     } else {
-        mailboxregs32 = (volatile struct mailbox_registers32 *)(sep_reg_u + 0x4000);
+        mailboxregs32 = (volatile struct mailbox_registers32 *)(sep_reg_u + 0x1000); // 4KB instead of 16KB
         is_sep64 = 0;
     }
 
